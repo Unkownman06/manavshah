@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AJAX User Validation</title>
+
+    <script>
+
+        function validateUser() {
+
+            let username =
+                document.getElementById("username").value;
+
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+
+                if (xhr.readyState == 4 &&
+                    xhr.status == 200) {
+
+                    document.getElementById("result")
+                        .innerHTML = xhr.responseText;
+                }
+            }
+
+            xhr.open(
+                "GET",
+                "validate.php?user=" + username,
+                true
+            );
+
+            xhr.send();
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1>User Validation using AJAX</h1>
+
+    <label>Enter Username:</label>
+
+    <br><br>
+
+    <input type="text" id="username">
+
+    <br><br>
+
+    <button onclick="validateUser()">
+        Submit
+    </button>
+
+    <br><br>
+
+    <div id="result"></div>
+
+</body>
+
+</html>
