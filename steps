@@ -3,3 +3,4 @@ npx tsc -v
 node app.js
 npx tsc access.ts
 node access.js
+python app.py
