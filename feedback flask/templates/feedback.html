@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Feedback Form</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+        }
+
+        .box {
+            width: 300px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input, textarea {
+
+            width: 100%;
+            padding: 8px;
+        }
+
+        button {
+
+            width: 100%;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Feedback Form</h2>
+
+        <form method="POST">
+
+            <label>Name</label>
+
+            <br><br>
+
+            <input type="text"
+                   name="name"
+                   required>
+
+            <br><br>
+
+            <label>Feedback</label>
+
+            <br><br>
+
+            <textarea name="feedback"
+                      required></textarea>
+
+            <br><br>
+
+            <button type="submit">
+
+                Submit
+
+            </button>
+
+        </form>
+
+        <h3>{{message}}</h3>
+
+    </div>
+
+</body>
+
+</html>

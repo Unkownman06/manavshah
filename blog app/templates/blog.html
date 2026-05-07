@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Blog App</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        h1 {
+
+            text-align: center;
+            color: darkblue;
+        }
+
+        .post {
+
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>My Blog App</h1>
+
+    {% for post in posts %}
+
+    <div class="post">
+
+        <h2>{{post.title}}</h2>
+
+        <p>{{post.content}}</p>
+
+    </div>
+
+    {% endfor %}
+
+</body>
+
+</html>
